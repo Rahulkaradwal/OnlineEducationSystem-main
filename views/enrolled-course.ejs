@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enrolled Courses</title>
+
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html" class="logo"> Online Education System </a>
+
+      <div id="menu-btn" class="fas fa-bars"></div>
+
+      <nav class="navbar">
+        <ul>
+          <li><a href="home.html">home</a></li>
+          <li><a href="/signout">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="heading">
+      <h3>Enrolled Courses</h3>
+      <p><a href="index.html">home ></a> Course</p>
+    </section>
+
+    <section class="course-1 course-2">
+      <% if (student.enrolledCourses.length === 0) { %>
+      <p>You have not enrolled in any courses yet.</p>
+      <% } else { %> <% student.enrolledCourses.forEach(course => { %>
+      <div class="box">
+        <div class="image">
+          <img src="images/course-1.png" alt="" />
+        </div>
+        <div class="content">
+          <h3><%= course.courseName %></h3>
+          <p><%= course.courseDescription %></p>
+          <a href="#" class="btn">Delete</a>
+        </div>
+      </div>
+      <% }) %> <% } %>
+    </section>
+
+    <section class="footer">
+      <div class="credit">Online Education System</div>
+    </section>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

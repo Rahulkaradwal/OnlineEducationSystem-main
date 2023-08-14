@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teachers</title>
+
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html" class="logo"> Online Education System </a>
+
+      <div id="menu-btn" class="fas fa-bars"></div>
+
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">home</a></li>
+          <li><a href="about.html">about</a></li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="heading">
+      <h3>our teachers</h3>
+      <p><a href="index.html">home ></a> Teachers</p>
+    </section>
+
+    <section class="teachers">
+      <% teachers.forEach(function(teacher, index) { %>
+      <div class="box">
+        <div class="image">
+          <% const imageIndex = (index % 8) + 1; %>
+          <img src="images/teacher-<%= imageIndex %>.png" alt="" />
+          <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+          </div>
+        </div>
+        <div class="content">
+          <h3><%= teacher.name %></h3>
+          <span><%= teacher.role %></span>
+        </div>
+      </div>
+      <% })%>
+    </section>
+
+    <section class="footer">
+      <div class="credit">Online Education System</div>
+    </section>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

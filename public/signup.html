@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+
+    <link rel="stylesheet" href="index.css" />
+
+    <!-- Remove the script related to the course enrolled/teaching sections -->
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html" class="logo">
+        <i class="fas fa-graduation-cap"></i> Online Education System
+      </a>
+
+      <div id="menu-btn" class="fas fa-bars"></div>
+
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">home</a></li>
+          <li><a href="about.html">about</a></li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- header section ends -->
+
+    <section class="heading">
+      <h3>Sign Up</h3>
+      <p><a href="index.html">home ></a> about</p>
+    </section>
+
+    <!-- about section starts  -->
+
+    <div class="sign_container">
+      <div class="sign_wrapper">
+        <h1>Signup</h1>
+        <form action="/signup" method="POST">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+
+          <div class="form-group">
+            <label for="userid">UserID:</label>
+            <input type="text" id="userid" name="userid" required />
+          </div>
+          <div class="form-group">
+            <label for="role" style="margin-right: 55px">Role:</label>
+            <div class="checkbox-group">
+              <label style="margin-left: 5px">
+                <input
+                  type="radio"
+                  id="studentRadio"
+                  name="role"
+                  value="student"
+                  style="margin-right: 5px"
+                />
+                Student
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  id="teacherRadio"
+                  name="role"
+                  value="teacher"
+                  style="margin-right: 5px"
+                />
+                Teacher
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Signup</button>
+        </form>
+        <p class="signin-link">
+          Already have an account? <a href="signin.html">Sign in</a>
+        </p>
+      </div>
+    </div>
+    <section class="footer">
+      <div class="credit">Online Education System</div>
+    </section>
+
+    <!-- footer section ends -->
+
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

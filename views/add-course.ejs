@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Course</title>
+
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html" class="logo"> Online Education System </a>
+
+      <div id="menu-btn" class="fas fa-bars"></div>
+
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">home</a></li>
+          <li><a href="about.html">about</a></li>
+          <li><a href="contact.html">contact</a></li>
+          <li><a href="/signout">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="heading">
+      <h3>Add Course</h3>
+      <p><a href="index.html">home ></a> Course</p>
+    </div>
+    <div class="course-wrapper">
+      <div class="wrap">
+        <div class="course-form">
+          <form action="/add-course" method="POST">
+            <div class="form-group">
+              <label for="courseName">Course Name:</label>
+              <input type="text" id="courseName" name="courseName" required />
+            </div>
+            <div class="form-group">
+              <label for="courseDescription">Description:</label>
+              <textarea
+                id="courseDescription"
+                name="courseDescription"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Course</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

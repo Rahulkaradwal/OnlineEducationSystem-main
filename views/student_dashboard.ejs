@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard</title>
+
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html" class="logo"> Online Education System </a>
+
+      <div id="menu-btn" class="fas fa-bars"></div>
+
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">home</a></li>
+          <li><a href="/enrolled-course">Enrolled Courses</a></li>
+          <li><a href="/signout">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="heading">
+      <h3>Courses</h3>
+      <p><a href="index.html">home ></a> Course</p>
+    </section>
+
+    <section class="course-1 course-2">
+      <% courses.forEach(course => { %>
+      <div class="box">
+        <div class="image">
+          <img src="images/course-2>.png" alt="" />
+        </div>
+        <div class="content">
+          <h3><%= course.courseName %></h3>
+          <p><%= course.courseDescription %></p>
+          <a href="/enroll?courseId=<%= course._id %>" class="btn">Enroll</a>
+        </div>
+      </div>
+      <% }) %>
+    </section>
+
+    <section class="footer">
+      <div class="credit">Online Education System</div>
+    </section>
+  </body>
+</html>
